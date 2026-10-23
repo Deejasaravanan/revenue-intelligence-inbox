@@ -1,0 +1,26 @@
+{
+ "payload": {
+  "id": "c759b921-e9d3-540c-a06b-474c5710342d",
+  "title": "SpendNest setup - Sample account",
+  "starts_at": "2026-08-21T14:30:00Z",
+  "ends_at": "2026-08-21T15:00:00Z",
+  "duration_seconds": 1800,
+  "provider": "google_meet",
+  "join_url": "https://meet.example.invalid/c759b921-e9d3-540c-a06b-474c5710342d",
+  "organizer_email": "arun@example.com",
+  "attendee_count": 1,
+  "recording_status": "cancelled",
+  "recording_detail": "The notetaker was cancelled before the meeting started.",
+  "recording_id": null,
+  "has_transcript": false,
+  "has_video": false,
+  "summary": null,
+  "summary_status": null,
+  "redacted": true
+ },
+ "transcript_payload": {
+  "meeting_id": "c759b921-e9d3-540c-a06b-474c5710342d",
+  "turns": [],
+  "unavailable_reason": "The notetaker was cancelled before the meeting started."
+ }
+}

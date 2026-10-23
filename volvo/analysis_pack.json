@@ -1,0 +1,1665 @@
+{
+ "note": "Pre-generated analysis for the 44-record post-update state. Source fields stay separate. Each analysis carries source_revision; the app should show it as stale if the record revision differs.",
+ "routes": {
+  "coaching": "Sales coaching note",
+  "deal-next-steps": "Deal / opportunity next steps",
+  "customer-followup": "Existing-customer follow-up (CS / support)",
+  "partner-channel": "Partner / referral-channel follow-up",
+  "internal-vendor-note": "Internal or vendor note (SpendNest is not selling)",
+  "log-only": "Logged, nothing to action",
+  "intake-only": "Intake state only (no usable text)"
+ },
+ "metrics": {
+  "date": "2026-08-21 (Asia/Kolkata)",
+  "records": 44,
+  "calls": 30,
+  "meetings": 14,
+  "usable_texts_after_update": 18,
+  "usable_calls": 10,
+  "usable_meetings": 8,
+  "coverage_overall": "18/44 = 40.9%",
+  "coverage_initial": "17/44 = 38.6%",
+  "coverage_calls": "10/30 = 33.3%",
+  "coverage_meetings": "8/14 = 57.1% (7/14 = 50.0% before update)",
+  "source_reported_connection": "11/30 calls with is_connected=true (null count 0) = 36.7%",
+  "text_based_note": "Reading the 10 text-covered calls, 8 are real two-way conversations; C02 (switchboard) and C04 (voicemail) are not. Stored is_conversation=true on 9 of these 10 (it also marks C02). This is a judgement over the smaller text-covered subset - do not mix it with the stored rate.",
+  "calls_by_rep": {
+   "Arun": 15,
+   "Leela": 8,
+   "Kiran": 1,
+   "Meera": 5,
+   "Dev": 1
+  },
+  "meetings_by_organiser": {
+   "team06@example.com": 1,
+   "team07@example.com": 1,
+   "team08@example.com": 3,
+   "team09@example.com": 3,
+   "team10@example.com": 1,
+   "team11@example.com": 1,
+   "team12@example.com": 1,
+   "team13@example.com": 1,
+   "arun@example.com": 1,
+   "team14@example.com": 1
+  },
+  "route_assignments": 48,
+  "records_with_a_route": 44,
+  "multi_route_records": 4,
+  "route_counts": {
+   "intake-only": 26,
+   "coaching": 7,
+   "log-only": 1,
+   "deal-next-steps": 7,
+   "partner-channel": 2,
+   "internal-vendor-note": 2,
+   "customer-followup": 3
+  },
+  "stored_outcomes": {
+   "voicemail": 16,
+   "unresponsive": 5,
+   "uninterested": 2,
+   "ooo": 1,
+   "follow_up": 4,
+   "referred": 2
+  },
+  "review_states": {
+   "intake-no-text": 20,
+   "analysed-current": 12,
+   "analysed-needs-review": 6,
+   "intake-silent": 3,
+   "intake-no-recording": 3
+  },
+  "latest_activity_ist": "23:59:29",
+  "replay": [
+   {
+    "step": "1 import 01_initial",
+    "unique": 44,
+    "new": 44,
+    "replaced": 0,
+    "ignored": 0,
+    "usable_texts": 17
+   },
+   {
+    "step": "2 import 01_initial again, shuffled",
+    "unique": 44,
+    "new": 0,
+    "replaced": 0,
+    "ignored": 44,
+    "usable_texts": 17
+   },
+   {
+    "step": "3 import 02_update (rev 2)",
+    "unique": 44,
+    "new": 0,
+    "replaced": 1,
+    "ignored": 0,
+    "usable_texts": 18
+   },
+   {
+    "step": "4 import 01_initial again (rev 1 after rev 2)",
+    "unique": 44,
+    "new": 0,
+    "replaced": 0,
+    "ignored": 44,
+    "usable_texts": 18
+   }
+  ]
+ },
+ "brief": {
+  "date": "2026-08-21",
+  "scope": "44 selected records (30 calls, 14 meetings); a deliberately selected sample, not a team-performance view.",
+  "attention": [
+   {
+    "rank": 1,
+    "ref": "M07",
+    "title": "Customer triage: 4 issues, 3 unexplained",
+    "why": "Time-bound promises made (\"today\"; \"an hour or two\"); one issue not on the original list.",
+    "action": "Confirm each commitment was closed; no later status is in the data."
+   },
+   {
+    "rank": 2,
+    "ref": "M09",
+    "title": "Customer cannot log in (fresh reset token also expired)",
+    "why": "Update promised \"today, otherwise Monday\".",
+    "action": "Check status; resolve the expired-token cause."
+   },
+   {
+    "rank": 3,
+    "ref": "M04",
+    "title": "Retention risk in card migration",
+    "why": "Old programme closes in \"coming weeks\"; customer main need is credit; three eligibility checks owed.",
+    "action": "Send the eligibility answer; do not let the migration date lead."
+   },
+   {
+    "rank": 4,
+    "ref": "M03",
+    "title": "Best buying signals, two expectation gaps",
+    "why": "Surprise that cards are prepaid; INR 26,000 vs 39,000 confusion; CFO approval ahead.",
+    "action": "Send proposal with recurring and one-time charges separated; let them revert."
+   },
+   {
+    "rank": 5,
+    "ref": "M01",
+    "title": "Partner onboarding deliverables owed",
+    "why": "Documents, memorandum, referral link, tracking sheet, marketing intro.",
+    "action": "Send them together, with eligibility limits stated."
+   },
+   {
+    "rank": 6,
+    "ref": "C03+C07",
+    "title": "Two follow-ups agreed for Monday (24 Aug, inferred)",
+    "why": "Kiran and Dev each have a stated next contact.",
+    "action": "Make sure each proposal/email is sent before the call; check C07 eligibility first."
+   }
+  ],
+  "coaching": [
+   "State purpose and who you are in the first sentence (C01).",
+   "Say prepaid vs credit and the price split up front, in writing (M03).",
+   "Accept a stated \"I will contact you\" - do not re-propose a call (C10).",
+   "Record explicit constraints on referrals, e.g. no-name request (C09).",
+   "Verify account facts before a support call (M09)."
+  ],
+  "label_challenges": [
+   "C05 and C10: stored \"follow_up\" overstated - only C03 and C07 have a mutually agreed next contact (2 of 4 stored follow_up).",
+   "C02: stored is_conversation=true, text is a switchboard exchange.",
+   "M02: title looks like a prospect meeting; SpendNest is the buyer."
+  ],
+  "not_analysed": "26 records have no usable text; they get an intake state only (see inbox)."
+ },
+ "records": [
+  {
+   "record_ref": "B01",
+   "source_type": "call",
+   "source_id": "4868e5cd-5ab8-581c-a0e4-acc37385f0cf",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:59:29",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B02",
+   "source_type": "call",
+   "source_id": "5747e4cd-e24f-5bed-bf74-9e3f326b2d77",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:59:19",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, unresponsive (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B03",
+   "source_type": "call",
+   "source_id": "024caffc-d16e-5843-b325-682dbc8d448e",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:59:02",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B04",
+   "source_type": "call",
+   "source_id": "530207ea-d67b-521a-8085-bdb9ae665417",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:58:37",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B05",
+   "source_type": "call",
+   "source_id": "903641e9-d761-591a-a149-334ddfcd236e",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:58:35",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B06",
+   "source_type": "call",
+   "source_id": "53f61c95-27b9-50c2-8755-08f957594950",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:57:56",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, unresponsive (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B07",
+   "source_type": "call",
+   "source_id": "f9be8537-1ad9-58fc-be24-78f73d09db9c",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:57:31",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B08",
+   "source_type": "call",
+   "source_id": "77350513-913c-5fed-b4e6-71009de9df03",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:56:51",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, unresponsive (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B09",
+   "source_type": "call",
+   "source_id": "747390bc-f359-5609-bf79-0a44ef8919bd",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:56:43",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B10",
+   "source_type": "call",
+   "source_id": "3ea930a1-0496-51e3-9dca-adc3be29331a",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:55:52",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B11",
+   "source_type": "call",
+   "source_id": "bfefcb48-1a98-5610-a0ee-0f03434188a9",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:55:44",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, unresponsive (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B12",
+   "source_type": "call",
+   "source_id": "9a64eb58-d462-5a6e-aa9e-c0f88852ebe0",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:55:21",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B13",
+   "source_type": "call",
+   "source_id": "6521ed7d-53fc-5b3b-be77-7d4610c90ed7",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:54:21",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B14",
+   "source_type": "call",
+   "source_id": "81da63f4-eac6-5efd-95e1-69ad6e6def25",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:53:44",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, unresponsive (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B15",
+   "source_type": "call",
+   "source_id": "2ada5ab0-8a84-54b7-a071-cd5bd6ad5abd",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:53:36",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B16",
+   "source_type": "call",
+   "source_id": "1f5181ed-4175-5d73-a16b-01d404b1820d",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:53:29",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B17",
+   "source_type": "call",
+   "source_id": "1645d595-1896-5201-9395-cb8a9f1c5f3a",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:52:59",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B18",
+   "source_type": "call",
+   "source_id": "26c3ccc3-63a6-55f6-a5a3-e279b36b7e88",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:51:58",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B19",
+   "source_type": "call",
+   "source_id": "6ee11c0e-c74a-5805-b552-657443378b72",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:51:24",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "B20",
+   "source_type": "call",
+   "source_id": "94b4f015-b243-5b89-b435-9957125ecdd4",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:51:02",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-text",
+   "flags": [
+    "Background call, voicemail (source label); no transcript supplied - not evidence that nothing was said."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "C01",
+   "source_type": "call",
+   "source_id": "2ec4404c-beee-5377-a63c-aab701da08ed",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:41:25",
+   "usable_text": true,
+   "routes": [
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Prospect questioned where SpendNest got his details - manager should decide how lead-source questions are answered"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Cold call to a contact about an advisory firm. The contact did not know why he was called, asked twice where his details came from, and declined.",
+    "why_it_matters": "Clear decline plus a data-source challenge; no follow-up is warranted. The opening never stated the purpose plainly.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "I don't know how I ended up on your list."
+     },
+     {
+      "type": "quote",
+      "quote": "it's still a cold call, isn't it?"
+     },
+     {
+      "type": "quote",
+      "quote": "Our processes are already very automated."
+     }
+    ],
+    "not_established": "Does not establish a formal do-not-contact request (he said not interested). Does not establish how the number was really sourced beyond the rep's one-line answer.",
+    "next_steps": [
+     {
+      "action": "Mark as not interested; suppress further outreach to this contact",
+      "owner": "Manager decision - no owner stated"
+     },
+     {
+      "action": "Agree one standard answer for 'where did you get my number'",
+      "owner": "Manager decision - no owner stated"
+     }
+    ],
+    "stored_label_check": "Stored 'uninterested' agrees with text.",
+    "coaching": "State who you are and why you are calling in the first sentence; the contact asked 'why are you calling' three times before getting an answer."
+   }
+  },
+  {
+   "record_ref": "C02",
+   "source_type": "call",
+   "source_id": "4b870624-8aad-5315-a60e-0db95981cf99",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 23:14:02",
+   "usable_text": true,
+   "routes": [
+    "log-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Stored is_conversation=true, but the text is only a switchboard exchange"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Rep asked a receptionist for a named person, was told she was out of office, and chose voicemail.",
+    "why_it_matters": "No buyer conversation happened. Useful only as a log entry.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "It looks as though she isn't in the office today."
+     },
+     {
+      "type": "quote",
+      "quote": "Her voicemail would be fine, thank you."
+     }
+    ],
+    "not_established": "Transcript ends at the transfer; it does not show that a voicemail message was actually left. The first name 'Leela' matches a SpendNest rep label but nothing links them - do not associate.",
+    "next_steps": [
+     {
+      "action": "Retry the contact later if still wanted",
+      "owner": "No owner stated"
+     }
+    ],
+    "stored_label_check": "Stored 'ooo' fits; stored is_conversation=true overstates - challenge it.",
+    "coaching": null
+   }
+  },
+  {
+   "record_ref": "C03",
+   "source_type": "call",
+   "source_id": "20d509ba-d589-5334-9aef-ea4ce6105b1a",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 22:17:07",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Audio very poor; contact barely remembers the earlier discussion"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Rep followed up on an earlier developer-access (API) discussion. Contact had poor audio, said it is not essential enough to spend much on, and agreed to receive an email.",
+    "why_it_matters": "One of two follow-ups with a mutually agreed next contact, but interest is lukewarm and price was the earlier concern.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "it isn't essential enough for us to spend much on it"
+     },
+     {
+      "type": "quote",
+      "quote": "I can email you."
+     },
+     {
+      "type": "quote",
+      "quote": "I'll also try you on Monday."
+     }
+    ],
+    "not_established": "Budget, decision-maker and real interest are not established. The earlier conversation is only described by the speakers.",
+    "next_steps": [
+     {
+      "action": "Send email with subject 'Developer access and event notifications - follow-up'",
+      "owner": "Kiran (rep on record; said 'I'll send it over')"
+     },
+     {
+      "action": "Try the contact again Monday/Tuesday",
+      "owner": "Kiran (stated)"
+     }
+    ],
+    "stored_label_check": "Stored 'follow_up' supported.",
+    "coaching": "Rep restated the context clearly and offered email when audio failed - good recovery."
+   }
+  },
+  {
+   "record_ref": "C04",
+   "source_type": "call",
+   "source_id": "bcdcbf56-d338-5c78-9a97-42c2fc1c9931",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 19:52:29",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Voicemail only - no contact reached"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Rep left a voicemail for an evaluating contact after an earlier proposal had gone to a wrong email address and was re-sent to a corrected one.",
+    "why_it_matters": "Opportunity status is unknown; the ball is with the contact. Text-available does not mean a conversation occurred.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "My understanding is that our information first went to the wrong email address."
+     },
+     {
+      "type": "quote",
+      "quote": "The person you called is unavailable."
+     }
+    ],
+    "not_established": "The earlier consideration and the corrected-address resend are the rep's own statements; no response from the contact is shown.",
+    "next_steps": [
+     {
+      "action": "Wait for callback; re-attempt if none",
+      "owner": "Arun (rep on record; asked for a call back)"
+     }
+    ],
+    "stored_label_check": "Stored 'voicemail' and is_conversation=false agree with text.",
+    "coaching": null
+   }
+  },
+  {
+   "record_ref": "C05",
+   "source_type": "call",
+   "source_id": "75a6b94f-7717-5cfb-9e41-0acc94415e17",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 18:05:16",
+   "usable_text": true,
+   "routes": [
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Stored 'follow_up' is stronger than the text supports"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Cold pitch to a multi-store business. The contact repeatedly said they already have each capability and asked for a presentation.",
+    "why_it_matters": "Real objection (incumbents including one named platform). The only 'next step' is a presentation with no follow-up date.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "We already have that."
+     },
+     {
+      "type": "quote",
+      "quote": "If we ever decide to change the providers"
+     },
+     {
+      "type": "quote",
+      "quote": "What exactly is the product?"
+     }
+    ],
+    "not_established": "Does not establish active interest or any agreed follow-up time. Existing-platform claims are the contact's statements.",
+    "next_steps": [
+     {
+      "action": "Send the presentation to the confirmed email; no call agreed",
+      "owner": "Meera (rep on record; stated 'Certainly')"
+     }
+    ],
+    "stored_label_check": "Stored 'follow_up' overstated: no mutually agreed next contact.",
+    "coaching": "The contact had to ask what the product was; lead with one-sentence value and ask one discovery question before listing features. The 'does your system also execute payments?' question was a good gap-finder."
+   }
+  },
+  {
+   "record_ref": "C06",
+   "source_type": "call",
+   "source_id": "12216d5c-e254-52c6-b344-47de4c6e1ae5",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 18:01:11",
+   "usable_text": true,
+   "routes": [
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Spoken rep name differs from rep_name on record"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Cold call to a large multi-store business. Contact said many capabilities are already in place and automated, and said they would reach out if a need arises.",
+    "why_it_matters": "Soft decline with no next step. Rep kept probing after the signal.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "We already have many of those things in place."
+     },
+     {
+      "type": "quote",
+      "quote": "If there is something we need from you in future, we can contact you."
+     }
+    ],
+    "not_established": "'Uninterested' is a fair reading but not a hard no. The speaker who said a department monitors this daily is not clear in the text.",
+    "next_steps": [
+     {
+      "action": "No follow-up committed; optional nurture later",
+      "owner": "No owner stated"
+     }
+    ],
+    "stored_label_check": "Stored 'uninterested' reasonable. Note: rep introduces as a different name than rep_name - spoken ID may differ (dictionary).",
+    "coaching": "After the contact signals 'already in place', take the exit or ask one question tied to their stated gap; the extra pitch added nothing."
+   }
+  },
+  {
+   "record_ref": "C07",
+   "source_type": "call",
+   "source_id": "428817fa-7e9e-5418-a7d4-bb396d28dfbf",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 17:52:28",
+   "usable_text": true,
+   "routes": [
+    "partner-channel",
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Eligibility limits stated in M01 (registered businesses, US entity/operations evidence) were not mentioned on this call - check before sending the proposal"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Rep pitched a referral partnership to an advisory firm that incorporates companies. Contact referred clients elsewhere today and asked for a proposal by chat app.",
+    "why_it_matters": "A real, mutually agreed next step (proposal, then Monday call) in the partner channel.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "could you message me on our chat app and send whatever proposal you have?"
+     },
+     {
+      "type": "quote",
+      "quote": "could I call on Monday to see whether you'd like to discuss it further?"
+     },
+     {
+      "type": "quote",
+      "quote": "Do you currently refer clients to providers for that part of the process?"
+     }
+    ],
+    "not_established": "Partner interest is not established beyond agreeing to read a proposal. Eligibility fit for this firm's clients is unknown.",
+    "next_steps": [
+     {
+      "action": "Send proposal on the chat app",
+      "owner": "Dev (rep on record; said 'Certainly')"
+     },
+     {
+      "action": "Call Monday",
+      "owner": "Dev (asked, contact agreed)"
+     }
+    ],
+    "stored_label_check": "Stored 'follow_up' supported.",
+    "coaching": "Product description wandered ('not an accounting firm... similar to a payments provider'). Use one plain sentence and state eligibility limits up front."
+   }
+  },
+  {
+   "record_ref": "C08",
+   "source_type": "call",
+   "source_id": "129497b2-8e1d-5e01-919c-e8a852b5ff68",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 17:23:22",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Contact did not own the topic but pointed to a colleague handling people operations and locations, who may already be looking at a solution, and gave permission to use his name.",
+    "why_it_matters": "A warm referral with explicit permission; it is a referral, not a qualified opportunity.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "If you send him a proposal and say you spoke with me, he can take a look."
+     },
+     {
+      "type": "quote",
+      "quote": "There have been some discussions."
+     }
+    ],
+    "not_established": "Does not establish that the colleague is evaluating or has budget; 'some discussions' is vague.",
+    "next_steps": [
+     {
+      "action": "Send proposal to the colleague's address read back on the call, mentioning the contact",
+      "owner": "Meera (rep on record; stated 'I'll send the information there')"
+     }
+    ],
+    "stored_label_check": "Stored 'referred' supported.",
+    "coaching": "Good practice: read the email back and confirmed it."
+   }
+  },
+  {
+   "record_ref": "C09",
+   "source_type": "call",
+   "source_id": "4a1de681-f884-55e8-b1ad-de22d17cd959",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 16:56:03",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Contact explicitly refused use of his name - any templated 'as discussed with...' follow-up would violate this"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Contact said they built their own software, pointed to a business head on a professional network, but asked that his name not be used.",
+    "why_it_matters": "Referral comes with a constraint that a CRM label 'referred' would hide.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "No, please don't use my name."
+     },
+     {
+      "type": "quote",
+      "quote": "We have developed our own software internally"
+     }
+    ],
+    "not_established": "Does not establish a gap in their internal system or any interest; the contact did not know the detail.",
+    "next_steps": [
+     {
+      "action": "Approach the named business head without citing this contact",
+      "owner": "Meera (rep on record; agreed 'no problem')"
+     }
+    ],
+    "stored_label_check": "Stored 'referred' supported but incomplete - missing the no-name constraint.",
+    "coaching": "Asking permission before naming him was right; record the constraint on the lead."
+   }
+  },
+  {
+   "record_ref": "C10",
+   "source_type": "call",
+   "source_id": "b747f592-810e-583c-9b81-8db5ab035806",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 16:51:15",
+   "usable_text": true,
+   "routes": [
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Stored 'follow_up' contradicts the call; contact has left the original company"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "The contact no longer works at the company the rep named and now works in manufacturing. He asked for a brief on a messaging app and declined a follow-up call.",
+    "why_it_matters": "Stale contact data, and a stored follow-up label that the contact explicitly refused.",
+    "evidence": [
+     {
+      "type": "quote",
+      "quote": "I don't work there anymore."
+     },
+     {
+      "type": "quote",
+      "quote": "No. I said I will contact you if there is anything to discuss."
+     }
+    ],
+    "not_established": "His new employer's fit is not established.",
+    "next_steps": [
+     {
+      "action": "Send the brief he asked for; do not schedule a call",
+      "owner": "Meera (rep on record; stated 'I'll do that')"
+     },
+     {
+      "action": "Correct the contact's company on the lead",
+      "owner": "No owner stated"
+     }
+    ],
+    "stored_label_check": "Stored 'follow_up' overstated: follow-up call declined.",
+    "coaching": "The rep re-proposed a call after he said he would revert - accept the stated terms."
+   }
+  },
+  {
+   "record_ref": "M01",
+   "source_type": "meeting",
+   "source_id": "cb5cecac-e68d-52b7-b10b-b0c748efc467",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 18:30:00",
+   "usable_text": true,
+   "routes": [
+    "partner-channel"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Commission / pricing figures are speaker claims; terms not confirmed in writing in this record"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Onboarding discussion with an advisory firm to refer registered businesses. Partner asked for referral mechanics; team member explained commission, customer pricing, onboarding documents and limits.",
+    "why_it_matters": "Several deliverables are owed to the partner and the partner's launch depends on them.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 2,
+      "timecode": "00:02:53",
+      "speaker": "Team member A",
+      "quote": "we work with registered businesses"
+     },
+     {
+      "type": "turn",
+      "turn": 13,
+      "timecode": "00:10:29",
+      "speaker": "Team member A",
+      "quote": "evidence of US operations or intended operations"
+     },
+     {
+      "type": "turn",
+      "turn": 21,
+      "timecode": "00:14:50",
+      "speaker": "Team member A",
+      "quote": "let us use the unique link"
+     },
+     {
+      "type": "turn",
+      "turn": 12,
+      "timecode": "00:10:26",
+      "speaker": "Partner A",
+      "quote": "let us get the partner onboarding started"
+     },
+     {
+      "type": "turn",
+      "turn": 25,
+      "timecode": "00:17:37",
+      "speaker": "Team member A",
+      "quote": "I will send the documents and the information discussed here."
+     },
+     {
+      "type": "turn",
+      "turn": 27,
+      "timecode": "00:17:56",
+      "speaker": "Team member A",
+      "quote": "I can connect you with marketing about that."
+     }
+    ],
+    "not_established": "No signed memorandum or confirmed commercial terms. Does not establish that any referred business will qualify (US operations evidence needed).",
+    "next_steps": [
+     {
+      "action": "Send documents, referral link, tracking sheet and partner memorandum",
+      "owner": "Team member A (local label; not mapped to a named person)"
+     },
+     {
+      "action": "Connect partner with marketing re podcast / partner page",
+      "owner": "Team member A (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Strong: stated the registered-business limit early and repeated it; adapted when the partner pushed back on manual emails."
+   }
+  },
+  {
+   "record_ref": "M02",
+   "source_type": "meeting",
+   "source_id": "1a21c409-c050-5787-90af-2667e057e1b6",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 17:00:00",
+   "usable_text": true,
+   "routes": [
+    "internal-vendor-note"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Title looks like a prospect meeting but SpendNest is the buyer here"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "SpendNest is evaluating LedgerBridge, a supplier of compliant e-invoicing, for an invoicing module. Supplier explained scope, two pricing models and setup fees; SpendNest explained timing and need.",
+    "why_it_matters": "A build-or-integrate input for the receivables plan, not a sales opportunity. Timing is soft.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 1,
+      "timecode": "00:05:22",
+      "speaker": "Team member A",
+      "quote": "whether LedgerBridge can give us compliant invoicing coverage"
+     },
+     {
+      "type": "turn",
+      "turn": 31,
+      "timecode": "00:45:53",
+      "speaker": "Supplier A",
+      "quote": "The basic setup begins at EUR 2,600"
+     },
+     {
+      "type": "turn",
+      "turn": 15,
+      "timecode": "00:19:56",
+      "speaker": "Team member B",
+      "quote": "I would not describe the quarter as an immovable deadline."
+     },
+     {
+      "type": "turn",
+      "turn": 36,
+      "timecode": "00:51:24",
+      "speaker": "Supplier A",
+      "quote": "I will send the template shortly"
+     },
+     {
+      "type": "turn",
+      "turn": 16,
+      "timecode": "00:21:17",
+      "speaker": "Team member A",
+      "quote": "some willingness to pilot"
+     }
+    ],
+    "not_established": "No purchase decision, budget approval or confirmed demand; pilot willingness is a SpendNest claim. Supplier's capabilities are its own claims.",
+    "next_steps": [
+     {
+      "action": "Supplier to send the volume template",
+      "owner": "Supplier A (stated)"
+     },
+     {
+      "action": "SpendNest to complete the template and brief management",
+      "owner": "Team member A (stated need; person not named)"
+     }
+    ],
+    "stored_label_check": "n/a - title is only a hint.",
+    "coaching": null
+   }
+  },
+  {
+   "record_ref": "M03",
+   "source_type": "meeting",
+   "source_id": "398672e7-62dd-5afd-846d-0237d49792fb",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 15:00:00",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps",
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Customer discovered mid-demo the cards are prepaid",
+    "Price confusion: INR 26,000 vs 39,000"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Prospect (two attendees) assessed domestic prepaid cards plus expense review. They expected a credit card, queried a price that had risen, and said the CFO must approve.",
+    "why_it_matters": "Strongest buying signals in the set, with two expectation gaps that can stall it.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 6,
+      "timecode": "00:11:04",
+      "speaker": "Customer A",
+      "quote": "these are prepaid?"
+     },
+     {
+      "type": "turn",
+      "turn": 23,
+      "timecode": "00:30:41",
+      "speaker": "Customer A",
+      "quote": "But you previously told me INR 26,000."
+     },
+     {
+      "type": "turn",
+      "turn": 24,
+      "timecode": "00:30:43",
+      "speaker": "Team member A",
+      "quote": "INR 26,000 plus tax is the recurring annual subscription"
+     },
+     {
+      "type": "turn",
+      "turn": 16,
+      "timecode": "00:21:40",
+      "speaker": "Team member A",
+      "quote": "that is something we can build"
+     },
+     {
+      "type": "turn",
+      "turn": 28,
+      "timecode": "00:34:43",
+      "speaker": "Customer B",
+      "quote": "Our CFO approves the larger payments."
+     },
+     {
+      "type": "turn",
+      "turn": 36,
+      "timecode": "00:48:43",
+      "speaker": "Customer B",
+      "quote": "Send the details first."
+     }
+    ],
+    "not_established": "No decision. Automatic accounting sync is described as buildable, not as existing. Two different INR monthly figures are not the same measure.",
+    "next_steps": [
+     {
+      "action": "Send cards proposal and other-module info, with recurring vs one-time charges split out",
+      "owner": "Team member A (stated)"
+     },
+     {
+      "action": "Let the customer revert after CFO review; do not push a call",
+      "owner": "Customer B (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Say prepaid vs credit and the price split at the start, in writing. Here it surfaced as a surprise."
+   }
+  },
+  {
+   "record_ref": "M04",
+   "source_type": "meeting",
+   "source_id": "b0f79b3d-37ba-52f9-b2bc-58b159dd6d91",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 14:30:00",
+   "usable_text": true,
+   "routes": [
+    "customer-followup",
+    "deal-next-steps"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Retention risk: old card programme closes in 'coming weeks' and the customer's core need is credit",
+    "Proposed (unconfirmed) link to M13: same account name and organiser identifier."
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Existing customer discussed a planned card migration. The replacement is still prepaid; the customer wants credit, and the idea of connecting their bank-issued credit cards was explored.",
+    "why_it_matters": "Customer's main need conflicts with the migration; three eligibility checks are owed by SpendNest.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 4,
+      "timecode": "00:03:23",
+      "speaker": "Team member A",
+      "quote": "The plan is to close the old programme in the coming weeks"
+     },
+     {
+      "type": "turn",
+      "turn": 10,
+      "timecode": "00:06:21",
+      "speaker": "Team member A",
+      "quote": "The replacement I described is still prepaid."
+     },
+     {
+      "type": "turn",
+      "turn": 11,
+      "timecode": "00:07:17",
+      "speaker": "Customer A",
+      "quote": "moving from prepaid to credit is the main issue for us"
+     },
+     {
+      "type": "turn",
+      "turn": 23,
+      "timecode": "00:25:44",
+      "speaker": "Team member A",
+      "quote": "I cannot confirm the existing-card eligibility on this call."
+     },
+     {
+      "type": "turn",
+      "turn": 29,
+      "timecode": "00:31:25",
+      "speaker": "Customer A",
+      "quote": "We are not deciding the whole migration on this call."
+     }
+    ],
+    "not_established": "Does not establish that the customer will leave. Existing-card eligibility, accounting sync and department move are all unconfirmed. M13 may be related (same account name and organiser) but is not confirmed.",
+    "next_steps": [
+     {
+      "action": "Confirm eligibility of already-issued bank cards and the accounting-sync question",
+      "owner": "Team member A (stated)"
+     },
+     {
+      "action": "Arrange session to move users between departments",
+      "owner": "Team member A (offered)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Honest about prepaid vs credit and what could not be confirmed - good. Lead with the credit gap before the migration date."
+   }
+  },
+  {
+   "record_ref": "M05",
+   "source_type": "meeting",
+   "source_id": "e0ecb112-ed94-5e8e-ae71-19def5536337",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 12:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-silent",
+   "flags": [
+    "Recorded, but source says nobody spoke; has_transcript=true yet zero usable turns."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "M06",
+   "source_type": "meeting",
+   "source_id": "657b9e9d-9472-5b01-a127-a648ad7e8cf7",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 12:00:00",
+   "usable_text": true,
+   "routes": [
+    "deal-next-steps",
+    "coaching"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Contact is a branch finance person; central team owns most processes"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Discovery with a branch finance contact about receivables, collections and expense controls. Contact asked for materials and raised data-protection concern.",
+    "why_it_matters": "Early, exploratory; low decision authority; invoice volumes are rough and were revised mid-call.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 2,
+      "timecode": "00:04:47",
+      "speaker": "Customer A",
+      "quote": "I handle finance for one branch"
+     },
+     {
+      "type": "turn",
+      "turn": 25,
+      "timecode": "00:23:07",
+      "speaker": "Customer A",
+      "quote": "the dedicated central team handles much of this today"
+     },
+     {
+      "type": "turn",
+      "turn": 16,
+      "timecode": "00:15:09",
+      "speaker": "Customer A",
+      "quote": "These are rough numbers in this conversation"
+     },
+     {
+      "type": "turn",
+      "turn": 31,
+      "timecode": "00:34:27",
+      "speaker": "Customer A",
+      "quote": "Confidentiality is important."
+     },
+     {
+      "type": "turn",
+      "turn": 33,
+      "timecode": "00:35:33",
+      "speaker": "Customer A",
+      "quote": "Please send the information and we can stay in touch."
+     }
+    ],
+    "not_established": "No buying intent, budget or decision-maker established. Described automation capabilities are the rep's claims, 'would be configured'.",
+    "next_steps": [
+     {
+      "action": "Send material on payables, receivables and security setup",
+      "owner": "Team member A (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Security question got a generic answer; bring a specific one-pager. Good: rep corrected a misunderstanding of invoice count politely."
+   }
+  },
+  {
+   "record_ref": "M07",
+   "source_type": "meeting",
+   "source_id": "4f304fff-fd40-5cfc-a366-0a134c445c2a",
+   "source_revision": 2,
+   "local_time_ist": "2026-08-21 11:00:00",
+   "usable_text": true,
+   "routes": [
+    "customer-followup"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Text arrived in revision 2; analysis is for revision 2",
+    "Four distinct issues; one raised that was not on the customer's original list"
+   ],
+   "analysis": {
+    "source_revision": 2,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Screen-share triage of issues a customer had sent in: edited description not showing after save; document upload failing via Recreate payment (workaround exists); reimbursement payments stuck in Processing; and Mark as paid carrying the previous amount.",
+    "why_it_matters": "Three of four are unexplained. Time-bound promises were made.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 7,
+      "timecode": "00:12:08",
+      "speaker": "Team member A",
+      "quote": "I do not have an explanation for it yet."
+     },
+     {
+      "type": "turn",
+      "turn": 13,
+      "timecode": "00:13:40",
+      "speaker": "Team member A",
+      "quote": "the workaround is to save the changes, return to the invoice inbox, open Review and upload the document there."
+     },
+     {
+      "type": "turn",
+      "turn": 15,
+      "timecode": "00:14:54",
+      "speaker": "Team member A",
+      "quote": "The workaround does not mean the direct upload issue has been resolved."
+     },
+     {
+      "type": "turn",
+      "turn": 19,
+      "timecode": "00:15:37",
+      "speaker": "Team member A",
+      "quote": "stuck showing Processing"
+     },
+     {
+      "type": "turn",
+      "turn": 19,
+      "timecode": "00:15:37",
+      "speaker": "Team member A",
+      "quote": "I expect an update or resolution in an hour or two"
+     },
+     {
+      "type": "turn",
+      "turn": 21,
+      "timecode": "00:16:27",
+      "speaker": "Customer A",
+      "quote": "INR 18,200"
+     },
+     {
+      "type": "turn",
+      "turn": 25,
+      "timecode": "00:18:07",
+      "speaker": "Team member A",
+      "quote": "I will report that separately as well"
+     }
+    ],
+    "not_established": "No root cause. The reimbursement issue was said to be resolved for another user; not shown for this one. No later status is supplied.",
+    "next_steps": [
+     {
+      "action": "Check description-save behaviour today",
+      "owner": "Team member A (stated)"
+     },
+     {
+      "action": "Get the team's answer on stuck Processing payments and tell the customer",
+      "owner": "Team member A (stated: hour or two)"
+     },
+     {
+      "action": "Report Mark as paid carry-over separately",
+      "owner": "Team member A (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Customer showed the steps and the rep restated each issue and was honest about unknowns - good. Do not call the workaround a fix."
+   }
+  },
+  {
+   "record_ref": "M08",
+   "source_type": "meeting",
+   "source_id": "883182d8-eb86-56f9-a928-152365998d15",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 10:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-silent",
+   "flags": [
+    "Recorded, but source says nobody spoke; has_transcript=true yet zero usable turns."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "M09",
+   "source_type": "meeting",
+   "source_id": "4b5b9192-f3fc-505a-8e77-4d2ffaa54594",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 10:00:00",
+   "usable_text": true,
+   "routes": [
+    "customer-followup"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-needs-review",
+   "flags": [
+    "Open: fresh reset link also expired; update promised 'today, otherwise Monday'"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Account-setup support: an invitation failed, a fresh reset email also showed an expired token, and the customer debated shared-mailbox admin access across two company accounts.",
+    "why_it_matters": "Customer cannot log in to the larger company account; separate identities per company was the agreed direction.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 21,
+      "timecode": "00:13:54",
+      "speaker": "Customer A",
+      "quote": "It says the token has expired."
+     },
+     {
+      "type": "turn",
+      "turn": 22,
+      "timecode": "00:13:57",
+      "speaker": "Team member A",
+      "quote": "We have not got the Brookmint Holdings login working yet."
+     },
+     {
+      "type": "turn",
+      "turn": 31,
+      "timecode": "00:19:23",
+      "speaker": "Team member A",
+      "quote": "aim to return with an update today, otherwise Monday"
+     },
+     {
+      "type": "turn",
+      "turn": 17,
+      "timecode": "00:11:23",
+      "speaker": "Customer A",
+      "quote": "I do not want this to depend on trusting someone"
+     },
+     {
+      "type": "turn",
+      "turn": 7,
+      "timecode": "00:05:19",
+      "speaker": "Customer A",
+      "quote": "No, only Northkite Equipment used the trial."
+     }
+    ],
+    "not_established": "Cause of the expired token is unknown. The customer resolved the accounting issue themselves; no SpendNest fix is shown.",
+    "next_steps": [
+     {
+      "action": "Investigate expired-token problem and update the customer",
+      "owner": "Team member A (stated)"
+     },
+     {
+      "action": "Customer speaks to IT about separate email identities",
+      "owner": "Customer A (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": "Verify account facts before the call - the assumption that the trial covered both companies was wrong."
+   }
+  },
+  {
+   "record_ref": "M10",
+   "source_type": "meeting",
+   "source_id": "337f297d-9385-5b82-9e54-5019c1ed912c",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 13:00:00",
+   "usable_text": true,
+   "routes": [
+    "internal-vendor-note"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "analysed-current",
+   "flags": [
+    "Internal training, not a customer meeting"
+   ],
+   "analysis": {
+    "source_revision": 1,
+    "freshness": "current",
+    "generated": "pre-generated (Claude, reviewed against source)",
+    "what_happened": "Internal training on billing operations: invoice generation, due periods, retry schedule for failed deductions and account freeze.",
+    "why_it_matters": "Reference for support and finance staff; no sales analysis applies.",
+    "evidence": [
+     {
+      "type": "turn",
+      "turn": 5,
+      "timecode": "00:05:44",
+      "speaker": "Team member A",
+      "quote": "That is a different application."
+     },
+     {
+      "type": "turn",
+      "turn": 17,
+      "timecode": "00:20:24",
+      "speaker": "Team member A",
+      "quote": "payments and cards can be blocked"
+     },
+     {
+      "type": "turn",
+      "turn": 20,
+      "timecode": "00:22:46",
+      "speaker": "Team member A",
+      "quote": "I will request the back-office access separately"
+     }
+    ],
+    "not_established": "Process rules are the trainer's statements. Two pairs of turns share a timecode - cite by turn number.",
+    "next_steps": [
+     {
+      "action": "Request back-office access for the next session",
+      "owner": "Team member A (stated)"
+     }
+    ],
+    "stored_label_check": "n/a",
+    "coaching": null
+   }
+  },
+  {
+   "record_ref": "M11",
+   "source_type": "meeting",
+   "source_id": "fc651475-187c-5882-a644-b501408e8647",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 17:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-silent",
+   "flags": [
+    "Recorded, but source says nobody spoke; has_transcript=true yet zero usable turns."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "M12",
+   "source_type": "meeting",
+   "source_id": "c759b921-e9d3-540c-a06b-474c5710342d",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 20:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-recording",
+   "flags": [
+    "Notetaker cancelled; meeting may still have happened."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "M13",
+   "source_type": "meeting",
+   "source_id": "794a9d1c-889d-5957-873f-8a1271b03455",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 14:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-recording",
+   "flags": [
+    "No notetaker scheduled; meeting may still have happened.",
+    "Proposed (unconfirmed) link to M04: same account name in title and same organiser identifier; kept as a separate record."
+   ],
+   "analysis": null
+  },
+  {
+   "record_ref": "M14",
+   "source_type": "meeting",
+   "source_id": "93f4867d-65cd-5236-bc55-7bd57df8ac24",
+   "source_revision": 1,
+   "local_time_ist": "2026-08-21 13:00:00",
+   "usable_text": false,
+   "routes": [
+    "intake-only"
+   ],
+   "route_origin": "automated_suggestion",
+   "review_state": "intake-no-recording",
+   "flags": [
+    "Notetaker cancelled; meeting may still have happened."
+   ],
+   "analysis": null
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Intelligence Inbox — Executive Workspace</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon">⚡</span>
+        <div>
+          <span class="brand-title">Revenue Intelligence Inbox</span>
+          <span class="brand-subtitle">Manager Workspace • 21 Aug 2026 (Asia/Kolkata)</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" data-view="brief" role="tab" aria-selected="true">
+          <span>📋</span> Briefing
+        </button>
+        <button class="nav-tab" data-view="dashboard" role="tab" aria-selected="false">
+          <span>📊</span> Dashboard
+        </button>
+        <button class="nav-tab" data-view="inbox" role="tab" aria-selected="false">
+          <span>📥</span> Inbox (44)
+        </button>
+        <button class="nav-tab" data-view="detail" role="tab" aria-selected="false">
+          <span>🔍</span> Record Detail
+        </button>
+        <button class="nav-tab" data-view="import" role="tab" aria-selected="false">
+          <span>🔄</span> Import & Replay
+        </button>
+      </nav>
+
+      <div class="nav-meta">
+        <div id="header-state-pill">
+          <span class="badge badge-success">Post-Update (Rev 2)</span>
+        </div>
+        <div id="header-coverage-pill" class="text-xs text-subtle">
+          <!-- Filled by JS -->
+        </div>
+        <div id="header-manual-pill">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main class="app-main">
+    <div id="view-content">
+      <!-- Active view rendered here by app.js -->
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Local Offline Scripts -->
+  <script src="jszip.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

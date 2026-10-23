@@ -1,0 +1,26 @@
+{
+ "payload": {
+  "id": "93f4867d-65cd-5236-bc55-7bd57df8ac24",
+  "title": "CRM demonstration",
+  "starts_at": "2026-08-21T07:30:00Z",
+  "ends_at": "2026-08-21T08:30:00Z",
+  "duration_seconds": 3600,
+  "provider": "google_meet",
+  "join_url": "https://meet.example.invalid/93f4867d-65cd-5236-bc55-7bd57df8ac24",
+  "organizer_email": "team14@example.com",
+  "attendee_count": 4,
+  "recording_status": "cancelled",
+  "recording_detail": "The notetaker was cancelled before the meeting started.",
+  "recording_id": null,
+  "has_transcript": false,
+  "has_video": false,
+  "summary": null,
+  "summary_status": null,
+  "redacted": true
+ },
+ "transcript_payload": {
+  "meeting_id": "93f4867d-65cd-5236-bc55-7bd57df8ac24",
+  "turns": [],
+  "unavailable_reason": "The notetaker was cancelled before the meeting started."
+ }
+}

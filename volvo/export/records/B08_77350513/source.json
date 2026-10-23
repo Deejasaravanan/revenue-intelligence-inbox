@@ -1,0 +1,33 @@
+{
+ "payload": {
+  "id": "77350513-913c-5fed-b4e6-71009de9df03",
+  "external_call_id": "EXT-00008",
+  "workspace_slug": "workspace-02",
+  "rep_email": "leela@example.com",
+  "rep_name": "Leela",
+  "rep_user_id": null,
+  "direction": "inbound",
+  "direction_raw": "inbound",
+  "from_number": "PHONE-003",
+  "to_number": "PHONE-004",
+  "started_at": "2026-08-21T18:26:51Z",
+  "duration_seconds": 21,
+  "talk_time_seconds": 21,
+  "speaker_count": 1,
+  "segment_count": 1,
+  "is_connected": false,
+  "is_conversation": false,
+  "observed_outcome": "unresponsive",
+  "classification_reason": null,
+  "classification_status": "stored",
+  "is_campaign_call": false,
+  "first_dial_ever": true,
+  "first_connect_ever": false,
+  "prior_dials_ever": 0,
+  "prior_connects_ever": 13,
+  "summary": null,
+  "summary_status": "stored",
+  "transcript": null
+ },
+ "transcript_payload": null
+}

@@ -1,0 +1,26 @@
+{
+ "payload": {
+  "id": "883182d8-eb86-56f9-a928-152365998d15",
+  "title": "SpendNest product demonstration - Amberleaf Health",
+  "starts_at": "2026-08-21T04:30:00Z",
+  "ends_at": "2026-08-21T05:00:00Z",
+  "duration_seconds": 984,
+  "provider": "google_meet",
+  "join_url": "https://meet.example.invalid/883182d8-eb86-56f9-a928-152365998d15",
+  "organizer_email": "team08@example.com",
+  "attendee_count": 1,
+  "recording_status": "recorded",
+  "recording_detail": null,
+  "recording_id": "3c46437d-4dc1-5d59-ac37-03c0179aaff0",
+  "has_transcript": true,
+  "has_video": true,
+  "summary": null,
+  "summary_status": "stored",
+  "redacted": true
+ },
+ "transcript_payload": {
+  "meeting_id": "883182d8-eb86-56f9-a928-152365998d15",
+  "turns": [],
+  "unavailable_reason": "The meeting was recorded but nobody spoke."
+ }
+}

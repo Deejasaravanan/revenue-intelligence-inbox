@@ -1,0 +1,26 @@
+{
+ "payload": {
+  "id": "e0ecb112-ed94-5e8e-ae71-19def5536337",
+  "title": "SpendNest setup - Pinehaven Studio",
+  "starts_at": "2026-08-21T06:30:00Z",
+  "ends_at": "2026-08-21T07:00:00Z",
+  "duration_seconds": 987,
+  "provider": "google_meet",
+  "join_url": "https://meet.example.invalid/e0ecb112-ed94-5e8e-ae71-19def5536337",
+  "organizer_email": "team08@example.com",
+  "attendee_count": 1,
+  "recording_status": "recorded",
+  "recording_detail": null,
+  "recording_id": "6f7c8625-938a-5d80-9320-48fadd06b6fd",
+  "has_transcript": true,
+  "has_video": true,
+  "summary": null,
+  "summary_status": "stored",
+  "redacted": true
+ },
+ "transcript_payload": {
+  "meeting_id": "e0ecb112-ed94-5e8e-ae71-19def5536337",
+  "turns": [],
+  "unavailable_reason": "The meeting was recorded but nobody spoke."
+ }
+}
